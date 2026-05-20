@@ -1,5 +1,6 @@
 package com.gradeflow.presentation.screens.onboarding
 
+import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.pager.HorizontalPager
@@ -22,6 +23,7 @@ import kotlinx.coroutines.launch
 
 data class OnboardingPage(val title: String, val description: String, val icon: ImageVector)
 
+@OptIn(ExperimentalFoundationApi::class)
 @Composable
 fun OnboardingScreen(onFinish: () -> Unit) {
     val context = LocalContext.current
