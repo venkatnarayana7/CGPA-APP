@@ -9,7 +9,6 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
-import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
@@ -25,7 +24,6 @@ fun SettingsScreen(
 ) {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("gradeflow_prefs", 0) }
-    var darkMode by remember { mutableStateOf(prefs.getBoolean("dark_mode", false)) }
     var showDeleteDialog by remember { mutableStateOf(false) }
 
     Scaffold(
@@ -38,26 +36,6 @@ fun SettingsScreen(
         }
     ) { padding ->
         Column(Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState()).padding(16.dp)) {
-            Text("Appearance", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(vertical = 8.dp))
-            Card(Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
-                Row(Modifier.fillMaxWidth().padding(16.dp), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                    Row(verticalAlignment = Alignment.CenterVertically) {
-                        Icon(Icons.Filled.DarkMode, null, tint = MaterialTheme.colorScheme.primary)
-                        Spacer(Modifier.width(12.dp))
-                        Column {
-                            Text("Dark Mode", style = MaterialTheme.typography.bodyLarge)
-                            Text(if (darkMode) "Enabled" else "Disabled", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(0.6f))
-                        }
-                    }
-                    Switch(checked = darkMode, onCheckedChange = {
-                        darkMode = it
-                        prefs.edit().putBoolean("dark_mode", it).apply()
-                        Toast.makeText(context, if (it) "Dark mode enabled. Restart app to apply." else "Light mode enabled. Restart app to apply.", Toast.LENGTH_SHORT).show()
-                    })
-                }
-            }
-
-            Spacer(Modifier.height(24.dp))
             Text("Data", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.primary, modifier = Modifier.padding(vertical = 8.dp))
             Card(Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)) {
                 Column {
