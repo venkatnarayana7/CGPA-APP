@@ -1,0 +1,3 @@
+-keep class com.gradeflow.data.model.** { *; }
+-keep class com.gradeflow.domain.model.** { *; }
+-keepattributes *Annotation*
