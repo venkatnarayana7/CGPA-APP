@@ -1,6 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="108dp" android:height="108dp" android:viewportWidth="108" android:viewportHeight="108">
-    <path android:fillColor="#FF6B6B" android:pathData="M54,30 C54,30 38,42 38,56 C38,70 54,78 54,78 C54,78 70,70 70,56 C70,42 54,30 54,30Z" />
-    <path android:fillColor="#FFFFFF" android:pathData="M48,47 L48,62 L52,62 L52,56 L57,56 L57,53 L52,53 L52,50 L58,50 L58,47 Z" />
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Red circle background -->
+    <path
+        android:fillColor="#FF6B6B"
+        android:pathData="M54,27 C39.09,27 27,39.09 27,54 C27,68.91 39.09,81 54,81 C68.91,81 81,68.91 81,54 C81,39.09 68.91,27 54,27Z" />
+    <!-- White "G" letter -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M54,40 C46.27,40 40,46.27 40,54 C40,61.73 46.27,68 54,68 C61.73,68 68,61.73 68,54 L68,53 L55,53 L55,57 L63.5,57 C62.5,62 58.7,64 54,64 C48.48,64 44,59.52 44,54 C44,48.48 48.48,44 54,44 C57.5,44 60.5,45.8 62.2,48.4 L65.6,45.8 C63.1,42.3 58.8,40 54,40Z" />
 </vector>
