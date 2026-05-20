@@ -1,1 +1,79 @@
-{"university_id":"vtu","university_name":"VTU","short_name":"VTU","location":"Belagavi, Karnataka","grading_scale":10,"tgpa_formula":"(sum(credits * grade_points)) / sum(credits)","cgpa_formula":"(sum(sgpa * semester_credits)) / total_credits","percentage_formula":"(cgpa - 0.75) * 10","rounding":2,"failed_subjects_counted":true,"grade_mapping":{"S":10,"A":9,"B":8,"C":7,"D":6,"E":5,"F":0},"fail_grades":["F"],"regulations":["2018","2021","2022"],"max_credits_per_subject":5,"min_credits_per_subject":1}
+{
+  "university_id": "vtu",
+  "university_name": "VTU",
+  "short_name": "VTU",
+  "location": "Belagavi, Karnataka",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(credits * grade_points)) / sum(credits)",
+  "cgpa_formula": "(sum(sgpa * semester_credits)) / total_credits",
+  "percentage_formula": "(cgpa - 0.75) * 10",
+  "rounding": 2,
+  "failed_subjects_counted": true,
+  "grade_mapping": {"S": 10, "A": 9, "B": 8, "C": 7, "D": 6, "E": 5, "F": 0},
+  "fail_grades": ["F"],
+  "regulations": ["2018", "2021", "2022"],
+  "max_credits_per_subject": 5,
+  "min_credits_per_subject": 1,
+  "regulation_configs": {
+    "2018": {
+      "regulation_id": "2018",
+      "regulation_name": "CBCS 2018 Scheme",
+      "effective_from": 2018,
+      "percentage_formula": "(cgpa - 0.75) * 10"
+    },
+    "2021": {
+      "regulation_id": "2021",
+      "regulation_name": "NEP 2021 Scheme",
+      "effective_from": 2021,
+      "grade_mapping": {"S": 10, "A": 9, "B": 8, "C": 7, "D": 6, "E": 5, "F": 0},
+      "percentage_formula": "(cgpa - 0.75) * 10"
+    }
+  },
+  "grace_rules": {
+    "grace_enabled": true,
+    "max_grace_marks": 5,
+    "max_subjects_for_grace": 2,
+    "grace_applicable_grades": ["F"],
+    "conditional_pass_enabled": true,
+    "conditional_pass_min_marks": 35,
+    "conditional_pass_max_deficit": 5
+  },
+  "backlog_policy": {
+    "policy_type": "keep_highest",
+    "max_attempts": 0,
+    "replace_grade": true,
+    "keep_highest": true,
+    "backlog_cgpa_impact": true,
+    "promotion_rules": {
+      "max_backlogs_for_promotion": 4,
+      "min_cgpa_for_promotion": 0.0,
+      "mandatory_subjects_pass": false
+    }
+  },
+  "branches": {
+    "cse": {
+      "branch_id": "cse",
+      "branch_name": "Computer Science & Engineering",
+      "total_semesters": 8,
+      "honors_available": true,
+      "minors_available": true,
+      "semesters": {
+        "sem_1": {
+          "semester_number": 1,
+          "total_credits": 24,
+          "subjects": [
+            {"subject_name": "Mathematics-I", "subject_code": "21MAT11", "credits": 4, "is_lab": false},
+            {"subject_name": "Applied Physics", "subject_code": "21PHY12", "credits": 4, "is_lab": false},
+            {"subject_name": "Principles of Programming using C", "subject_code": "21PPS13", "credits": 3, "is_lab": false},
+            {"subject_name": "Basic Electronics", "subject_code": "21ELE14", "credits": 3, "is_lab": false},
+            {"subject_name": "Engineering Graphics", "subject_code": "21EGD15", "credits": 3, "is_lab": false},
+            {"subject_name": "Scientific Foundation of Health", "subject_code": "21SFH16", "credits": 2, "is_lab": false},
+            {"subject_name": "C Programming Lab", "subject_code": "21CPL17", "credits": 2, "is_lab": true},
+            {"subject_name": "Physics Lab", "subject_code": "21PHYL18", "credits": 1, "is_lab": true},
+            {"subject_name": "Constitution of India", "subject_code": "21CIP", "credits": 1, "is_audit": true}
+          ]
+        }
+      }
+    }
+  }
+}

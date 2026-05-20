@@ -1,1 +1,36 @@
-{"university_id":"lpu","university_name":"Lovely Professional University","short_name":"LPU","location":"Phagwara, Punjab","grading_scale":10,"tgpa_formula":"(sum(subject_credit * grade_point)) / total_credits","cgpa_formula":"(sum(sgpa * semester_credits)) / total_credits","percentage_formula":"cgpa * 9.5","rounding":2,"failed_subjects_counted":true,"grade_mapping":{"A+":10,"A":9,"B+":8,"B":7,"C+":6,"C":5,"D":4,"F":0},"fail_grades":["F"],"regulations":["2019","2020","2022"],"max_credits_per_subject":4,"min_credits_per_subject":1}
+{
+  "university_id": "lpu",
+  "university_name": "Lovely Professional University",
+  "short_name": "LPU",
+  "location": "Phagwara, Punjab",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(subject_credit * grade_point)) / total_credits",
+  "cgpa_formula": "(sum(sgpa * semester_credits)) / total_credits",
+  "percentage_formula": "cgpa * 9.5",
+  "rounding": 2,
+  "failed_subjects_counted": true,
+  "grade_mapping": {"A+": 10, "A": 9, "B+": 8, "B": 7, "C+": 6, "C": 5, "D": 4, "F": 0},
+  "fail_grades": ["F"],
+  "regulations": ["2019", "2020", "2022"],
+  "max_credits_per_subject": 4,
+  "min_credits_per_subject": 1,
+  "grace_rules": {
+    "grace_enabled": true,
+    "max_grace_marks": 5,
+    "max_subjects_for_grace": 1,
+    "grace_applicable_grades": ["F"],
+    "conditional_pass_enabled": false
+  },
+  "backlog_policy": {
+    "policy_type": "keep_highest",
+    "max_attempts": 3,
+    "replace_grade": true,
+    "keep_highest": true,
+    "backlog_cgpa_impact": true,
+    "promotion_rules": {
+      "max_backlogs_for_promotion": 5,
+      "min_cgpa_for_promotion": 0.0,
+      "mandatory_subjects_pass": false
+    }
+  }
+}

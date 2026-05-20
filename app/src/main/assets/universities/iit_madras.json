@@ -1,1 +1,22 @@
-{"university_id":"iit_madras","university_name":"IIT Madras","short_name":"IITM","location":"Chennai, Tamil Nadu","grading_scale":10,"tgpa_formula":"(sum(course_credit * grade_point)) / sum(course_credit)","cgpa_formula":"(sum(semester_gpa * semester_credits)) / sum(total_credits)","percentage_formula":"cgpa * 10","rounding":2,"grade_mapping":{"S":10,"A":9,"B":8,"C":7,"D":6,"E":5,"U":0},"fail_grades":["U"],"regulations":["2019","2021"],"max_credits_per_subject":8,"min_credits_per_subject":1}
+{
+  "university_id": "iit_madras",
+  "university_name": "IIT Madras",
+  "short_name": "IITM",
+  "location": "Chennai, Tamil Nadu",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(course_credit * grade_point)) / sum(course_credit)",
+  "cgpa_formula": "(sum(semester_gpa * semester_credits)) / sum(total_credits)",
+  "percentage_formula": "cgpa * 10",
+  "rounding": 2,
+  "grade_mapping": {"S": 10, "A": 9, "B": 8, "C": 7, "D": 6, "E": 5, "U": 0},
+  "fail_grades": ["U"],
+  "regulations": ["2019", "2021"],
+  "max_credits_per_subject": 8,
+  "min_credits_per_subject": 1,
+  "backlog_policy": {
+    "policy_type": "keep_highest",
+    "replace_grade": true,
+    "keep_highest": true,
+    "backlog_cgpa_impact": true
+  }
+}

@@ -1,1 +1,23 @@
-{"university_id":"bits_pilani","university_name":"BITS Pilani","short_name":"BITS","location":"Pilani, Rajasthan","grading_scale":10,"tgpa_formula":"(sum(course_credit * grade_point)) / total_credits","cgpa_formula":"(sum(sgpa * semester_credits)) / total_credits","percentage_formula":"cgpa * 9.5","rounding":2,"failed_subjects_counted":true,"grade_mapping":{"A":10,"A-":9,"B":8,"B-":7,"C":6,"D":5,"E":4,"NC":0},"fail_grades":["NC"],"regulations":["2019","2020","2022"],"max_credits_per_subject":5,"min_credits_per_subject":1}
+{
+  "university_id": "bits_pilani",
+  "university_name": "BITS Pilani",
+  "short_name": "BITS",
+  "location": "Pilani, Rajasthan",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(course_credit * grade_point)) / total_credits",
+  "cgpa_formula": "(sum(sgpa * semester_credits)) / total_credits",
+  "percentage_formula": "cgpa * 9.5",
+  "rounding": 2,
+  "failed_subjects_counted": true,
+  "grade_mapping": {"A": 10, "A-": 9, "B": 8, "B-": 7, "C": 6, "D": 5, "E": 4, "NC": 0},
+  "fail_grades": ["NC"],
+  "regulations": ["2019", "2020", "2022"],
+  "max_credits_per_subject": 5,
+  "min_credits_per_subject": 1,
+  "backlog_policy": {
+    "policy_type": "keep_highest",
+    "replace_grade": true,
+    "keep_highest": true,
+    "backlog_cgpa_impact": true
+  }
+}

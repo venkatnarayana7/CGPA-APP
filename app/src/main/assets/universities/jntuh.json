@@ -1,1 +1,143 @@
-{"university_id":"jntuh","university_name":"JNTUH","short_name":"JNTUH","location":"Hyderabad, Telangana","grading_scale":10,"tgpa_formula":"(sum(credits * grade_points)) / sum(credits)","cgpa_formula":"(sum(sgpa * semester_credits)) / total_credits","percentage_formula":"(cgpa - 0.75) * 10","rounding":2,"failed_subjects_counted":true,"grade_mapping":{"O":10,"A+":9,"A":8,"B+":7,"B":6,"C":5,"D":4,"F":0},"fail_grades":["F"],"regulations":["R16","R18","R22"],"max_credits_per_subject":5,"min_credits_per_subject":1}
+{
+  "university_id": "jntuh",
+  "university_name": "JNTUH",
+  "short_name": "JNTUH",
+  "location": "Hyderabad, Telangana",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(credits * grade_points)) / sum(credits)",
+  "cgpa_formula": "(sum(sgpa * semester_credits)) / total_credits",
+  "percentage_formula": "(cgpa - 0.75) * 10",
+  "rounding": 2,
+  "failed_subjects_counted": true,
+  "grade_mapping": {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "D": 4, "F": 0},
+  "fail_grades": ["F"],
+  "regulations": ["R16", "R18", "R22"],
+  "max_credits_per_subject": 5,
+  "min_credits_per_subject": 1,
+  "regulation_configs": {
+    "R16": {
+      "regulation_id": "R16",
+      "regulation_name": "Regulation 2016",
+      "effective_from": 2016,
+      "grade_mapping": {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "F": 0},
+      "percentage_formula": "(cgpa - 0.75) * 10",
+      "fail_grades": ["F"]
+    },
+    "R18": {
+      "regulation_id": "R18",
+      "regulation_name": "Regulation 2018",
+      "effective_from": 2018,
+      "grade_mapping": {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "D": 4, "F": 0},
+      "percentage_formula": "(cgpa - 0.75) * 10",
+      "fail_grades": ["F"],
+      "backlog_policy": {
+        "policy_type": "keep_highest",
+        "max_attempts": 4,
+        "replace_grade": true,
+        "keep_highest": true,
+        "backlog_cgpa_impact": true,
+        "promotion_rules": {
+          "max_backlogs_for_promotion": 4,
+          "min_cgpa_for_promotion": 0.0,
+          "mandatory_subjects_pass": false
+        }
+      }
+    },
+    "R22": {
+      "regulation_id": "R22",
+      "regulation_name": "Regulation 2022",
+      "effective_from": 2022,
+      "grade_mapping": {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "D": 4, "F": 0},
+      "percentage_formula": "(cgpa - 0.75) * 10",
+      "fail_grades": ["F"],
+      "grace_rules": {
+        "grace_enabled": true,
+        "max_grace_marks": 5,
+        "max_subjects_for_grace": 2,
+        "grace_applicable_grades": ["F"],
+        "conditional_pass_enabled": true,
+        "conditional_pass_min_marks": 40,
+        "conditional_pass_max_deficit": 5
+      },
+      "backlog_policy": {
+        "policy_type": "keep_highest",
+        "max_attempts": 0,
+        "replace_grade": true,
+        "keep_highest": true,
+        "backlog_cgpa_impact": true,
+        "promotion_rules": {
+          "max_backlogs_for_promotion": 6,
+          "min_cgpa_for_promotion": 0.0,
+          "mandatory_subjects_pass": false
+        }
+      }
+    }
+  },
+  "branches": {
+    "cse": {
+      "branch_id": "cse",
+      "branch_name": "Computer Science & Engineering",
+      "total_semesters": 8,
+      "honors_available": true,
+      "minors_available": true,
+      "semesters": {
+        "sem_1": {
+          "semester_number": 1,
+          "total_credits": 22,
+          "subjects": [
+            {"subject_name": "Mathematics-I", "subject_code": "MA101", "credits": 4, "is_lab": false},
+            {"subject_name": "Physics", "subject_code": "PH101", "credits": 4, "is_lab": false},
+            {"subject_name": "Programming for Problem Solving", "subject_code": "CS101", "credits": 3, "is_lab": false},
+            {"subject_name": "English", "subject_code": "EN101", "credits": 3, "is_lab": false},
+            {"subject_name": "Engineering Drawing", "subject_code": "ME101", "credits": 4, "is_lab": false},
+            {"subject_name": "Physics Lab", "subject_code": "PH101L", "credits": 2, "is_lab": true},
+            {"subject_name": "Programming Lab", "subject_code": "CS101L", "credits": 2, "is_lab": true}
+          ]
+        }
+      }
+    },
+    "ece": {
+      "branch_id": "ece",
+      "branch_name": "Electronics & Communication Engineering",
+      "total_semesters": 8,
+      "honors_available": true,
+      "minors_available": false,
+      "semesters": {
+        "sem_1": {
+          "semester_number": 1,
+          "total_credits": 22,
+          "subjects": [
+            {"subject_name": "Mathematics-I", "subject_code": "MA101", "credits": 4, "is_lab": false},
+            {"subject_name": "Physics", "subject_code": "PH101", "credits": 4, "is_lab": false},
+            {"subject_name": "Basic Electrical Engineering", "subject_code": "EE101", "credits": 3, "is_lab": false},
+            {"subject_name": "English", "subject_code": "EN101", "credits": 3, "is_lab": false},
+            {"subject_name": "Engineering Drawing", "subject_code": "ME101", "credits": 4, "is_lab": false},
+            {"subject_name": "Physics Lab", "subject_code": "PH101L", "credits": 2, "is_lab": true},
+            {"subject_name": "Electrical Lab", "subject_code": "EE101L", "credits": 2, "is_lab": true}
+          ]
+        }
+      }
+    }
+  },
+  "grace_rules": {
+    "grace_enabled": true,
+    "max_grace_marks": 5,
+    "max_subjects_for_grace": 2,
+    "grace_applicable_grades": ["F"],
+    "conditional_pass_enabled": true,
+    "conditional_pass_min_marks": 40,
+    "conditional_pass_max_deficit": 5
+  },
+  "backlog_policy": {
+    "policy_type": "keep_highest",
+    "max_attempts": 4,
+    "replace_grade": true,
+    "keep_highest": true,
+    "backlog_cgpa_impact": true,
+    "promotion_rules": {
+      "max_backlogs_for_promotion": 4,
+      "min_cgpa_for_promotion": 0.0,
+      "mandatory_subjects_pass": false
+    }
+  }
+}

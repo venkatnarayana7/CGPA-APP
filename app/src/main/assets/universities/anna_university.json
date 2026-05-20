@@ -1,1 +1,92 @@
-{"university_id":"anna_university","university_name":"Anna University","short_name":"AU","location":"Chennai, Tamil Nadu","grading_scale":10,"tgpa_formula":"(sum(subject_credit * grade_point)) / total_credits","cgpa_formula":"(sum(sgpa * semester_credits)) / total_credits","percentage_formula":"cgpa * 9.5","rounding":2,"arrear_subjects_counted":true,"grade_mapping":{"O":10,"A+":9,"A":8,"B+":7,"B":6,"C":5,"RA":0},"fail_grades":["RA"],"regulations":["R2017","R2021"],"max_credits_per_subject":5,"min_credits_per_subject":1}
+{
+  "university_id": "anna_university",
+  "university_name": "Anna University",
+  "short_name": "AU",
+  "location": "Chennai, Tamil Nadu",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(subject_credit * grade_point)) / total_credits",
+  "cgpa_formula": "(sum(sgpa * semester_credits)) / total_credits",
+  "percentage_formula": "cgpa * 9.5",
+  "rounding": 2,
+  "arrear_subjects_counted": true,
+  "grade_mapping": {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "RA": 0},
+  "fail_grades": ["RA"],
+  "regulations": ["R2017", "R2021"],
+  "max_credits_per_subject": 5,
+  "min_credits_per_subject": 1,
+  "regulation_configs": {
+    "R2017": {
+      "regulation_id": "R2017",
+      "regulation_name": "Regulation 2017",
+      "effective_from": 2017,
+      "grade_mapping": {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "RA": 0},
+      "percentage_formula": "cgpa * 9.5",
+      "fail_grades": ["RA"]
+    },
+    "R2021": {
+      "regulation_id": "R2021",
+      "regulation_name": "Regulation 2021",
+      "effective_from": 2021,
+      "grade_mapping": {"O": 10, "A+": 9, "A": 8, "B+": 7, "B": 6, "C": 5, "RA": 0},
+      "percentage_formula": "cgpa * 9.5",
+      "fail_grades": ["RA"],
+      "grace_rules": {
+        "grace_enabled": true,
+        "max_grace_marks": 3,
+        "max_subjects_for_grace": 2,
+        "grace_applicable_grades": ["RA"],
+        "conditional_pass_enabled": false
+      }
+    }
+  },
+  "autonomous_colleges": [
+    {
+      "college_id": "svce",
+      "college_name": "Sri Venkateswara College of Engineering",
+      "location": "Sriperumbudur, Tamil Nadu",
+      "parent_university": "anna_university"
+    },
+    {
+      "college_id": "ssn",
+      "college_name": "SSN College of Engineering",
+      "location": "Kalavakkam, Tamil Nadu",
+      "parent_university": "anna_university"
+    }
+  ],
+  "branches": {
+    "cse": {
+      "branch_id": "cse",
+      "branch_name": "Computer Science & Engineering",
+      "total_semesters": 8,
+      "honors_available": false,
+      "minors_available": false,
+      "semesters": {
+        "sem_1": {
+          "semester_number": 1,
+          "total_credits": 20,
+          "subjects": [
+            {"subject_name": "Mathematics-I", "subject_code": "MA3151", "credits": 4, "is_lab": false},
+            {"subject_name": "Engineering Physics", "subject_code": "PH3151", "credits": 3, "is_lab": false},
+            {"subject_name": "Engineering Chemistry", "subject_code": "CY3151", "credits": 3, "is_lab": false},
+            {"subject_name": "Problem Solving using C", "subject_code": "GE3151", "credits": 3, "is_lab": false},
+            {"subject_name": "Engineering Graphics", "subject_code": "GE3152", "credits": 4, "is_lab": false},
+            {"subject_name": "Physics Lab", "subject_code": "PH3152L", "credits": 1, "is_lab": true},
+            {"subject_name": "C Programming Lab", "subject_code": "GE3171", "credits": 2, "is_lab": true}
+          ]
+        }
+      }
+    }
+  },
+  "backlog_policy": {
+    "policy_type": "replace_grade",
+    "max_attempts": 0,
+    "replace_grade": true,
+    "keep_highest": false,
+    "backlog_cgpa_impact": true,
+    "promotion_rules": {
+      "max_backlogs_for_promotion": 3,
+      "min_cgpa_for_promotion": 0.0,
+      "mandatory_subjects_pass": false
+    }
+  }
+}

@@ -1,1 +1,23 @@
-{"university_id":"iit_delhi","university_name":"IIT Delhi","short_name":"IITD","location":"New Delhi, Delhi","grading_scale":10,"tgpa_formula":"(sum(credits * grade_points)) / sum(credits)","cgpa_formula":"(sum(sgpa * semester_credits)) / sum(total_credits)","percentage_formula":"cgpa * 10","rounding":2,"failed_subjects_counted":true,"grade_mapping":{"A":10,"A-":9,"B":8,"B-":7,"C":6,"C-":5,"D":4,"F":0},"fail_grades":["F"],"regulations":["2018","2019","2020"],"max_credits_per_subject":6,"min_credits_per_subject":1}
+{
+  "university_id": "iit_delhi",
+  "university_name": "IIT Delhi",
+  "short_name": "IITD",
+  "location": "New Delhi, Delhi",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(credits * grade_points)) / sum(credits)",
+  "cgpa_formula": "(sum(sgpa * semester_credits)) / sum(total_credits)",
+  "percentage_formula": "cgpa * 10",
+  "rounding": 2,
+  "failed_subjects_counted": true,
+  "grade_mapping": {"A": 10, "A-": 9, "B": 8, "B-": 7, "C": 6, "C-": 5, "D": 4, "F": 0},
+  "fail_grades": ["F"],
+  "regulations": ["2018", "2019", "2020"],
+  "max_credits_per_subject": 6,
+  "min_credits_per_subject": 1,
+  "backlog_policy": {
+    "policy_type": "keep_highest",
+    "replace_grade": true,
+    "keep_highest": true,
+    "backlog_cgpa_impact": true
+  }
+}

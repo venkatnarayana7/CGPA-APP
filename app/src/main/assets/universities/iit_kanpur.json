@@ -1,1 +1,23 @@
-{"university_id":"iit_kanpur","university_name":"IIT Kanpur","short_name":"IITK","location":"Kanpur, Uttar Pradesh","grading_scale":10,"tgpa_formula":"(sum(credits * points)) / sum(credits)","cgpa_formula":"(sum(sgpa * semester_credits)) / total_credits","percentage_formula":"(cgpa - 0.5) * 10","rounding":2,"repeat_subject_replacement":true,"grade_mapping":{"A":10,"B":8,"C":6,"D":4,"F":0},"fail_grades":["F"],"regulations":["2018","2020"],"max_credits_per_subject":6,"min_credits_per_subject":1}
+{
+  "university_id": "iit_kanpur",
+  "university_name": "IIT Kanpur",
+  "short_name": "IITK",
+  "location": "Kanpur, Uttar Pradesh",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(credits * points)) / sum(credits)",
+  "cgpa_formula": "(sum(sgpa * semester_credits)) / total_credits",
+  "percentage_formula": "(cgpa - 0.5) * 10",
+  "rounding": 2,
+  "repeat_subject_replacement": true,
+  "grade_mapping": {"A": 10, "B": 8, "C": 6, "D": 4, "F": 0},
+  "fail_grades": ["F"],
+  "regulations": ["2018", "2020"],
+  "max_credits_per_subject": 6,
+  "min_credits_per_subject": 1,
+  "backlog_policy": {
+    "policy_type": "replace_grade",
+    "replace_grade": true,
+    "keep_highest": false,
+    "backlog_cgpa_impact": true
+  }
+}

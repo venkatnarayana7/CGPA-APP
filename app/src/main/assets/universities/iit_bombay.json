@@ -1,1 +1,41 @@
-{"university_id":"iit_bombay","university_name":"IIT Bombay","short_name":"IITB","location":"Mumbai, Maharashtra","grading_scale":10,"tgpa_formula":"(sum(credits * grade_points)) / sum(credits)","cgpa_formula":"(sum(sgpa * semester_credits)) / sum(total_credits)","percentage_formula":"(cgpa - 0.5) * 10","rounding":2,"failed_subjects_counted":true,"audit_courses_excluded":true,"grade_mapping":{"AA":10,"AB":9,"BB":8,"BC":7,"CC":6,"CD":5,"DD":4,"FR":0},"fail_grades":["FR"],"regulations":["2019","2020","2021"],"max_credits_per_subject":8,"min_credits_per_subject":1}
+{
+  "university_id": "iit_bombay",
+  "university_name": "IIT Bombay",
+  "short_name": "IITB",
+  "location": "Mumbai, Maharashtra",
+  "grading_scale": 10,
+  "tgpa_formula": "(sum(credits * grade_points)) / sum(credits)",
+  "cgpa_formula": "(sum(sgpa * semester_credits)) / sum(total_credits)",
+  "percentage_formula": "(cgpa - 0.5) * 10",
+  "rounding": 2,
+  "failed_subjects_counted": true,
+  "audit_courses_excluded": true,
+  "grade_mapping": {"AA": 10, "AB": 9, "BB": 8, "BC": 7, "CC": 6, "CD": 5, "DD": 4, "FR": 0},
+  "fail_grades": ["FR"],
+  "regulations": ["2019", "2020", "2021"],
+  "max_credits_per_subject": 8,
+  "min_credits_per_subject": 1,
+  "backlog_policy": {
+    "policy_type": "keep_highest",
+    "max_attempts": 0,
+    "replace_grade": true,
+    "keep_highest": true,
+    "backlog_cgpa_impact": true
+  },
+  "branches": {
+    "cse": {
+      "branch_id": "cse",
+      "branch_name": "Computer Science & Engineering",
+      "total_semesters": 8,
+      "honors_available": true,
+      "minors_available": true
+    },
+    "ee": {
+      "branch_id": "ee",
+      "branch_name": "Electrical Engineering",
+      "total_semesters": 8,
+      "honors_available": true,
+      "minors_available": true
+    }
+  }
+}
