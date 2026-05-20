@@ -1,0 +1,54 @@
+[
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_login.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_signup.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_signup.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_my_complaints.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_my_complaints.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_profile.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_profile.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_report_issue.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_report_issue.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_chatbot.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_chatbot.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/item_complaint.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/item_complaint.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/item_chat_bot.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/item_chat_bot.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_edit_profile.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_edit_profile.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_complaint_detail.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_complaint_detail.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_splash.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/activity_home.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.citizenconnect.app-mergeDebugResources-55:/layout/item_chat_user.xml",
+        "source": "com.citizenconnect.app-main-58:/layout/item_chat_user.xml"
+    }
+]

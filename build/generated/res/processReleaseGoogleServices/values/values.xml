@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="firebase_database_url" translatable="false">https://citizenconnect-91c9c-default-rtdb.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">633680408515</string>
+    <string name="google_api_key" translatable="false">AIzaSyC-Pip7vxRy32EPd_vM27yNPKQGqMTJO5o</string>
+    <string name="google_app_id" translatable="false">1:633680408515:android:d09cf2581c157b055b1776</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyC-Pip7vxRy32EPd_vM27yNPKQGqMTJO5o</string>
+    <string name="google_storage_bucket" translatable="false">citizenconnect-91c9c.firebasestorage.app</string>
+    <string name="project_id" translatable="false">citizenconnect-91c9c</string>
+</resources>

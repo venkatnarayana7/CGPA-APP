@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg_screen">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@color/white" app:elevation="2dp">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            app:navigationIcon="@drawable/ic_arrow_back" app:navigationIconTint="@color/text_primary"
+            app:title="@string/report_an_issue" app:titleTextColor="@color/text_primary" android:background="@color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.core.widget.NestedScrollView android:layout_width="match_parent" android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior" android:clipToPadding="false" android:paddingBottom="24dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp" app:cardElevation="3dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/attach_photo"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_marginBottom="12dp"/>
+                    <ImageView android:id="@+id/ivPhoto" android:layout_width="match_parent" android:layout_height="140dp"
+                        android:background="@drawable/bg_photo_placeholder" android:src="@drawable/ic_camera"
+                        android:tint="@color/text_hint" android:scaleType="center"/>
+                    <ImageView android:id="@+id/ivPhotoPreview" android:layout_width="match_parent" android:layout_height="170dp"
+                        android:background="@drawable/bg_photo_placeholder" android:scaleType="centerCrop" android:visibility="gone"/>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="12dp">
+                        <com.google.android.material.button.MaterialButton android:id="@+id/btnCamera"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1"
+                            android:layout_marginEnd="8dp" android:text="@string/camera" app:icon="@drawable/ic_camera" app:cornerRadius="12dp"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/btnGallery"
+                            style="@style/Widget.Material3.Button.TonalButton"
+                            android:layout_width="0dp" android:layout_height="44dp" android:layout_weight="1"
+                            android:text="@string/gallery" app:icon="@drawable/ic_gallery" app:cornerRadius="12dp"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" app:cardCornerRadius="16dp" app:cardElevation="3dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/issue_details"
+                        android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary" android:layout_marginBottom="12dp"/>
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilTitle"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:hint="@string/issue_title" app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etTitle" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="textCapSentences"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilCategory"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                        android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="12dp"
+                        android:hint="@string/issue_category" app:startIconDrawable="@drawable/ic_category" app:startIconTint="@color/primary"
+                        app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+                        <AutoCompleteTextView android:id="@+id/actvCategory" android:layout_width="match_parent" android:layout_height="wrap_content" android:inputType="none"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                    <com.google.android.material.textfield.TextInputLayout android:id="@+id/tilDescription"
+                        style="@style/Widget.Material3.TextInputLayout.OutlinedBox" android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp" android:hint="@string/issue_description"
+                        app:boxCornerRadiusTopStart="12dp" app:boxCornerRadiusTopEnd="12dp" app:boxCornerRadiusBottomStart="12dp" app:boxCornerRadiusBottomEnd="12dp">
+                        <com.google.android.material.textfield.TextInputEditText android:id="@+id/etDescription" android:layout_width="match_parent" android:layout_height="wrap_content"
+                            android:minLines="4" android:gravity="top" android:inputType="textMultiLine|textCapSentences"/>
+                    </com.google.android.material.textfield.TextInputLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="16dp" app:cardCornerRadius="16dp" app:cardElevation="3dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:text="@string/location" android:textSize="14sp" android:textStyle="bold" android:textColor="@color/text_primary"/>
+                        <com.google.android.material.button.MaterialButton android:id="@+id/btnRefreshLocation"
+                            style="@style/Widget.Material3.Button.TextButton" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="@string/refresh" android:textSize="12sp"/>
+                    </LinearLayout>
+                    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="10dp"
+                        android:background="@drawable/bg_input_field" android:padding="14dp">
+                        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_location" android:tint="@color/primary"/>
+                        <TextView android:id="@+id/tvLocation" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:layout_marginStart="10dp" android:text="@string/fetching_location" android:textColor="@color/text_secondary" android:textSize="13sp"/>
+                        <com.google.android.material.progressindicator.CircularProgressIndicator android:id="@+id/locationProgress"
+                            android:layout_width="wrap_content" android:layout_height="wrap_content" app:indicatorSize="20dp" app:trackThickness="2dp" app:indicatorColor="@color/primary"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnSubmit"
+                android:layout_width="match_parent" android:layout_height="54dp" android:layout_marginTop="24dp"
+                android:text="@string/submit_complaint" android:textSize="15sp" android:textStyle="bold" app:cornerRadius="14dp" android:backgroundTint="@color/primary"/>
+            <com.google.android.material.progressindicator.LinearProgressIndicator android:id="@+id/submitProgress"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_marginTop="8dp" android:visibility="gone" app:indicatorColor="@color/primary"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

@@ -1,0 +1,5 @@
+com.citizenconnect.app.test.app-androidTest-0 C:\Users\Saurav Parate\AndroidStudioProjects\CC\app\build\generated\res\resValues\androidTest\debug
+com.citizenconnect.app.test.app-updated_navigation_xml-1 C:\Users\Saurav Parate\AndroidStudioProjects\CC\app\build\generated\updated_navigation_xml\debugAndroidTest
+com.citizenconnect.app.test.app-mergeDebugAndroidTestResources-2 C:\Users\Saurav Parate\AndroidStudioProjects\CC\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\merged.dir
+com.citizenconnect.app.test.app-mergeDebugAndroidTestResources-3 C:\Users\Saurav Parate\AndroidStudioProjects\CC\app\build\intermediates\incremental\debugAndroidTest\mergeDebugAndroidTestResources\stripped.dir
+com.citizenconnect.app.test.app-debugAndroidTest-4 C:\Users\Saurav Parate\AndroidStudioProjects\CC\app\build\intermediates\merged_res\debugAndroidTest\mergeDebugAndroidTestResources

@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg_screen">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:background="@drawable/bg_gradient_header" android:orientation="vertical"
+            android:paddingTop="52dp" android:paddingBottom="32dp" android:paddingStart="20dp" android:paddingEnd="20dp" android:gravity="center">
+            <de.hdodenhof.circleimageview.CircleImageView android:id="@+id/ivProfilePic" android:layout_width="88dp" android:layout_height="88dp"
+                android:src="@drawable/ic_person" app:civ_border_color="@color/white" app:civ_border_width="3dp"/>
+            <TextView android:id="@+id/tvName" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="User Name" android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold" android:layout_marginTop="12dp"/>
+            <TextView android:id="@+id/tvEmail" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="email@example.com" android:textColor="#BBffffff" android:textSize="13sp" android:layout_marginTop="4dp"/>
+            <TextView android:id="@+id/tvCity" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Not set" android:textColor="#99ffffff" android:textSize="12sp" android:layout_marginTop="4dp"/>
+            <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginTop="20dp">
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:gravity="center" android:background="#26FFFFFF" android:padding="14dp">
+                    <TextView android:id="@+id/tvStatTotal" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Total" android:textColor="#BBffffff" android:textSize="11sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:gravity="center" android:background="#26FFFFFF" android:padding="14dp">
+                    <TextView android:id="@+id/tvStatResolved" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Resolved" android:textColor="#BBffffff" android:textSize="11sp"/>
+                </LinearLayout>
+                <LinearLayout android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                    android:orientation="vertical" android:gravity="center" android:background="#26FFFFFF" android:padding="14dp">
+                    <TextView android:id="@+id/tvStatPending" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="0" android:textColor="@color/white" android:textSize="22sp" android:textStyle="bold"/>
+                    <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="Pending" android:textColor="#BBffffff" android:textSize="11sp"/>
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="20dp">
+            <androidx.cardview.widget.CardView android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:cardCornerRadius="16dp" app:cardElevation="3dp" app:cardBackgroundColor="@color/white">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical">
+                    <LinearLayout android:id="@+id/itemEditProfile" android:layout_width="match_parent" android:layout_height="56dp"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_person" android:tint="@color/primary"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:layout_marginStart="16dp" android:text="Edit Profile" android:textColor="@color/text_primary" android:textSize="15sp"/>
+                        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_back" android:tint="@color/text_hint" android:rotation="180"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginStart="56dp"/>
+                    <LinearLayout android:id="@+id/itemMyComplaints" android:layout_width="match_parent" android:layout_height="56dp"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_list" android:tint="@color/primary"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:layout_marginStart="16dp" android:text="My Complaints" android:textColor="@color/text_primary" android:textSize="15sp"/>
+                        <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_arrow_back" android:tint="@color/text_hint" android:rotation="180"/>
+                    </LinearLayout>
+                    <View android:layout_width="match_parent" android:layout_height="1dp" android:background="@color/divider" android:layout_marginStart="56dp"/>
+                    <LinearLayout android:id="@+id/itemLanguage" android:layout_width="match_parent" android:layout_height="56dp"
+                        android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="16dp" android:paddingEnd="16dp" android:background="?attr/selectableItemBackground">
+                        <ImageView android:layout_width="24dp" android:layout_height="24dp" android:src="@drawable/ic_city" android:tint="@color/primary"/>
+                        <TextView android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                            android:layout_marginStart="16dp" android:text="App Language" android:textColor="@color/text_primary" android:textSize="15sp"/>
+                        <TextView android:id="@+id/tvCurrentLanguage" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                            android:text="English" android:textColor="@color/primary" android:textSize="13sp" android:textStyle="bold"/>
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnLogout"
+                style="@style/Widget.Material3.Button.OutlinedButton"
+                android:layout_width="match_parent" android:layout_height="52dp" android:layout_marginTop="20dp"
+                android:text="LOGOUT" android:textColor="@color/error" app:strokeColor="@color/error" app:cornerRadius="14dp"/>
+
+            <com.google.android.material.button.MaterialButton android:id="@+id/btnDeleteAccount"
+                style="@style/Widget.Material3.Button.TextButton"
+                android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_marginTop="8dp"
+                android:text="Delete My Account" android:textColor="@color/text_hint" android:textSize="12sp"/>
+
+            <TextView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:text="CitizenConnect v1.0  |  SIH 2025  |  SIH25031"
+                android:textColor="@color/text_hint" android:textSize="11sp" android:gravity="center" android:layout_marginTop="16dp"/>
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

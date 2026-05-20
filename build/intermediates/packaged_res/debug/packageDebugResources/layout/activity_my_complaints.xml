@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="match_parent" android:background="@color/bg_screen">
+    <com.google.android.material.appbar.AppBarLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:background="@drawable/bg_gradient_header">
+        <com.google.android.material.appbar.MaterialToolbar android:id="@+id/toolbar"
+            android:layout_width="match_parent" android:layout_height="?attr/actionBarSize"
+            android:background="@android:color/transparent"
+            app:navigationIcon="@drawable/ic_arrow_back" app:navigationIconTint="@color/white"
+            app:title="@string/my_complaints" app:titleTextColor="@color/white"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:paddingBottom="14dp">
+            <com.google.android.material.card.MaterialCardView android:layout_width="match_parent" android:layout_height="48dp"
+                android:layout_marginStart="16dp" android:layout_marginEnd="16dp" android:layout_marginBottom="12dp"
+                app:cardCornerRadius="12dp" app:cardElevation="0dp" app:strokeWidth="0dp" app:cardBackgroundColor="#20FFFFFF">
+                <LinearLayout android:layout_width="match_parent" android:layout_height="match_parent" android:orientation="horizontal" android:gravity="center_vertical" android:paddingStart="12dp" android:paddingEnd="12dp">
+                    <ImageView android:layout_width="20dp" android:layout_height="20dp" android:src="@drawable/ic_search" app:tint="@color/white"/>
+                    <EditText android:id="@+id/etSearch" android:layout_width="match_parent" android:layout_height="match_parent"
+                        android:background="@null" android:hint="@string/search_hint" android:textColorHint="#CCFFFFFF"
+                        android:textColor="@color/white" android:textSize="14sp" android:paddingStart="10dp" android:singleLine="true" android:imeOptions="actionSearch"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:scrollbars="none" android:paddingStart="16dp" android:paddingEnd="16dp">
+                <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroup"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true">
+                    <com.google.android.material.chip.Chip android:id="@+id/chipAll"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/all_filter" android:checked="true"
+                        android:textColor="@color/chip_filter_text_color"
+                        app:chipBackgroundColor="@color/chip_filter_bg_color" app:chipStrokeWidth="0dp"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/chipSubmitted"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/submitted_filter"
+                        android:textColor="@color/chip_filter_text_color"
+                        app:chipBackgroundColor="@color/chip_filter_bg_color" app:chipStrokeWidth="0dp"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/chipInProgress"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/in_progress_filter"
+                        android:textColor="@color/chip_filter_text_color"
+                        app:chipBackgroundColor="@color/chip_filter_bg_color" app:chipStrokeWidth="0dp"/>
+                    <com.google.android.material.chip.Chip android:id="@+id/chipResolved"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/resolved_filter"
+                        android:textColor="@color/chip_filter_text_color"
+                        app:chipBackgroundColor="@color/chip_filter_bg_color" app:chipStrokeWidth="0dp"/>
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+            <HorizontalScrollView android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:scrollbars="none" android:paddingStart="16dp" android:paddingEnd="16dp" android:layout_marginTop="8dp">
+                <com.google.android.material.chip.ChipGroup android:id="@+id/chipGroupCategory"
+                    android:layout_width="wrap_content" android:layout_height="wrap_content" app:singleSelection="true">
+                    <com.google.android.material.chip.Chip android:id="@+id/chipCatAll"
+                        style="@style/Widget.Material3.Chip.Filter"
+                        android:layout_width="wrap_content" android:layout_height="wrap_content"
+                        android:text="@string/any_category" android:checked="true"
+                        android:textColor="@color/chip_filter_text_color"
+                        app:chipBackgroundColor="@color/chip_filter_bg_color" app:chipStrokeWidth="0dp"/>
+                </com.google.android.material.chip.ChipGroup>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </com.google.android.material.appbar.AppBarLayout>
+    <androidx.recyclerview.widget.RecyclerView android:id="@+id/rvComplaints"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:padding="16dp" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+    <LinearLayout android:id="@+id/emptyState" android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:gravity="center" android:visibility="gone"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+        <ImageView android:layout_width="80dp" android:layout_height="80dp" android:src="@drawable/ic_list" android:tint="@color/primary_lightest" android:layout_marginBottom="16dp"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/no_complaints_found" android:textSize="18sp" android:textStyle="bold" android:textColor="@color/text_secondary"/>
+        <TextView android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="@string/try_changing_search"
+            android:textColor="@color/text_hint" android:textSize="13sp" android:gravity="center"
+            android:layout_marginTop="8dp" android:paddingStart="32dp" android:paddingEnd="32dp"/>
+    </LinearLayout>
+    <com.google.android.material.progressindicator.CircularProgressIndicator android:id="@+id/progressBar"
+        android:layout_width="wrap_content" android:layout_height="wrap_content" android:layout_gravity="center"
+        app:indicatorColor="@color/primary" app:layout_behavior="@string/appbar_scrolling_view_behavior"/>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

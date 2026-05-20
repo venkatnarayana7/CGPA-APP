@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent" android:layout_height="wrap_content"
+    android:layout_marginBottom="12dp" app:cardCornerRadius="16dp" app:cardElevation="3dp" app:cardBackgroundColor="@color/white">
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:padding="16dp">
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="horizontal" android:gravity="center_vertical">
+            <TextView android:id="@+id/tvCategory" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_acknowledged" android:text="Category"
+                android:textColor="@color/chip_text_acknowledged" android:textSize="11sp" android:textStyle="bold"
+                android:paddingStart="10dp" android:paddingEnd="10dp" android:paddingTop="4dp" android:paddingBottom="4dp" android:maxWidth="160dp"/>
+            <View android:layout_width="0dp" android:layout_height="0dp" android:layout_weight="1"/>
+            <TextView android:id="@+id/tvStatus" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:background="@drawable/bg_chip_submitted" android:text="Submitted"
+                android:textColor="@color/chip_text_submitted" android:textSize="11sp" android:textStyle="bold"
+                android:paddingStart="10dp" android:paddingEnd="10dp" android:paddingTop="4dp" android:paddingBottom="4dp"/>
+        </LinearLayout>
+
+        <!-- Department Badge -->
+        <TextView android:id="@+id/tvDepartment" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:text="Department" android:textColor="@color/primary" android:textSize="10sp" android:textStyle="italic"
+            android:layout_marginTop="8dp" android:alpha="0.8"/>
+
+        <TextView android:id="@+id/tvTitle" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Issue Title" android:textColor="@color/text_primary" android:textSize="15sp" android:textStyle="bold"
+            android:layout_marginTop="10dp" android:maxLines="2" android:ellipsize="end"/>
+        <TextView android:id="@+id/tvDescription" android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:text="Description" android:textColor="@color/text_secondary" android:textSize="13sp"
+            android:layout_marginTop="4dp" android:maxLines="2" android:ellipsize="end"/>
+        <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="12dp">
+            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_location" android:tint="@color/text_hint"/>
+            <TextView android:id="@+id/tvAddress" android:layout_width="0dp" android:layout_height="wrap_content" android:layout_weight="1"
+                android:text="Address" android:textColor="@color/text_hint" android:textSize="11sp"
+                android:layout_marginStart="4dp" android:maxLines="1" android:ellipsize="end"/>
+            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_calendar" android:tint="@color/text_hint"/>
+            <TextView android:id="@+id/tvDate" android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:text="Date" android:textColor="@color/text_hint" android:textSize="11sp" android:layout_marginStart="4dp"/>
+        </LinearLayout>
+        <LinearLayout android:id="@+id/layoutPhotoIndicator" android:layout_width="wrap_content" android:layout_height="wrap_content"
+            android:orientation="horizontal" android:gravity="center_vertical" android:layout_marginTop="8dp" android:visibility="gone">
+            <ImageView android:layout_width="14dp" android:layout_height="14dp" android:src="@drawable/ic_camera" android:tint="@color/primary"/>
+            <TextView android:layout_width="wrap_content" android:layout_height="wrap_content" android:text=" Photo attached" android:textColor="@color/primary" android:textSize="11sp"/>
+        </LinearLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
