@@ -1,0 +1,2 @@
+-keep class com.citizenconnect.app.model.** { *; }
+-keepattributes *Annotation*

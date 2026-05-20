@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primary">#1565C0</color>
+    <color name="primary_variant">#0D47A1</color>
+    <color name="primary_light">#1976D2</color>
+    <color name="primary_lighter">#42A5F5</color>
+    <color name="primary_lightest">#BBDEFB</color>
+    <color name="primary_dark">#0A2744</color>
+    <color name="status_submitted">#E65100</color>
+    <color name="status_acknowledged">#1565C0</color>
+    <color name="status_in_progress">#6A1B9A</color>
+    <color name="status_resolved">#1B5E20</color>
+    <color name="bg_screen">#F4F7FC</color>
+    <color name="bg_card">#FFFFFF</color>
+    <color name="text_primary">#0D1B2A</color>
+    <color name="text_secondary">#4A6880</color>
+    <color name="text_hint">#9BB0C4</color>
+    <color name="white">#FFFFFF</color>
+    <color name="divider">#DEE7F0</color>
+    <color name="error">#D32F2F</color>
+    <color name="nav_selected">#1565C0</color>
+    <color name="nav_unselected">#9BB0C4</color>
+    <color name="chip_text_submitted">#E65100</color>
+    <color name="chip_text_acknowledged">#0D47A1</color>
+    <color name="chip_text_in_progress">#6A1B9A</color>
+    <color name="chip_text_resolved">#1B5E20</color>
+    <color name="chip_filter_selected_bg">#1565C0</color>
+    <color name="chip_filter_selected_text">#FFFFFF</color>
+    <color name="chip_filter_unselected_bg">#E8EEF8</color>
+    <color name="chip_filter_unselected_text">#0D1B2A</color>
+
+    <!-- Chat Colors -->
+    <color name="chat_bg_user">#E3F2FD</color>
+    <color name="chat_bg_bot">#FFFFFF</color>
+    <color name="chat_text_user">#0D47A1</color>
+    <color name="chat_text_bot">#212121</color>
+</resources>
