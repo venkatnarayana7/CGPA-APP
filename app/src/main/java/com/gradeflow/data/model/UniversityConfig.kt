@@ -10,33 +10,17 @@ data class UniversityConfig(
     @SerialName("short_name") val shortName: String,
     @SerialName("location") val location: String = "",
     @SerialName("grading_scale") val gradingScale: Int = 10,
-    @SerialName("tgpa_formula") val tgpaFormula: String = "weighted_average",
-    @SerialName("cgpa_formula") val cgpaFormula: String = "weighted_average",
-    @SerialName("percentage_formula") val percentageFormula: String = "",
-    @SerialName("percentage_multiplier") val percentageMultiplier: Double = 0.0,
-    @SerialName("percentage_subtractor") val percentageSubtractor: Double = 0.0,
+    @SerialName("tgpa_formula") val tgpaFormula: String = "(sum(credits * grade_points)) / sum(credits)",
+    @SerialName("cgpa_formula") val cgpaFormula: String = "(sum(sgpa * semester_credits)) / total_credits",
+    @SerialName("percentage_formula") val percentageFormula: String = "cgpa * 10",
     @SerialName("rounding") val rounding: Int = 2,
-    @SerialName("grade_mapping") val gradeMapping: List<GradeEntry> = emptyList(),
-    @SerialName("pass_grade_point") val passGradePoint: Double = 4.0,
+    @SerialName("failed_subjects_counted") val failedSubjectsCounted: Boolean = true,
+    @SerialName("audit_courses_excluded") val auditCoursesExcluded: Boolean = false,
+    @SerialName("repeat_subject_replacement") val repeatSubjectReplacement: Boolean = false,
+    @SerialName("arrear_subjects_counted") val arrearSubjectsCounted: Boolean = false,
+    @SerialName("grade_mapping") val gradeMapping: Map<String, Double> = emptyMap(),
     @SerialName("fail_grades") val failGrades: List<String> = emptyList(),
-    @SerialName("special_rules") val specialRules: List<SpecialRule> = emptyList(),
     @SerialName("regulations") val regulations: List<String> = emptyList(),
-    @SerialName("max_credits_per_subject") val maxCreditsPerSubject: Int = 6,
+    @SerialName("max_credits_per_subject") val maxCreditsPerSubject: Int = 8,
     @SerialName("min_credits_per_subject") val minCreditsPerSubject: Int = 1
-)
-
-@Serializable
-data class GradeEntry(
-    @SerialName("grade") val grade: String,
-    @SerialName("points") val points: Double,
-    @SerialName("description") val description: String = "",
-    @SerialName("range_min") val rangeMin: Int = 0,
-    @SerialName("range_max") val rangeMax: Int = 100
-)
-
-@Serializable
-data class SpecialRule(
-    @SerialName("rule_type") val ruleType: String,
-    @SerialName("description") val description: String,
-    @SerialName("value") val value: String = ""
 )

@@ -36,7 +36,7 @@ fun TgpaCalculatorScreen(
     val isSaved by viewModel.isSaved.collectAsStateWithLifecycle()
 
     val snackbarHostState = remember { SnackbarHostState() }
-    val availableGrades = remember(config) { config?.gradeMapping?.map { it.grade } ?: emptyList() }
+    val availableGrades = remember(config) { config?.gradeMapping?.keys?.toList() ?: emptyList() }
 
     LaunchedEffect(errorMessage) { errorMessage?.let { snackbarHostState.showSnackbar(it); viewModel.clearError() } }
     LaunchedEffect(isSaved) { if (isSaved) snackbarHostState.showSnackbar("Result saved!") }
