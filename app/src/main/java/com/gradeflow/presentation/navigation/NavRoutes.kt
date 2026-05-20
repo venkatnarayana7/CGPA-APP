@@ -1,7 +1,6 @@
 package com.gradeflow.presentation.navigation
 
 object NavRoutes {
-    const val SPLASH = "splash"
     const val ONBOARDING = "onboarding"
     const val HOME = "home"
     const val UNIVERSITY_SELECTION = "university_selection/{calculatorType}"

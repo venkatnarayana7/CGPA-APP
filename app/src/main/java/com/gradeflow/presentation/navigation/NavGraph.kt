@@ -14,24 +14,19 @@ import com.gradeflow.presentation.screens.home.HomeScreen
 import com.gradeflow.presentation.screens.onboarding.OnboardingScreen
 import com.gradeflow.presentation.screens.results.SavedResultsScreen
 import com.gradeflow.presentation.screens.settings.SettingsScreen
-import com.gradeflow.presentation.screens.splash.SplashScreen
 import com.gradeflow.presentation.screens.tgpa.TgpaCalculatorScreen
 import com.gradeflow.presentation.screens.university.UniversitySelectionScreen
 
 @Composable
-fun GradeFlowNavGraph(navController: NavHostController, startDestination: String = NavRoutes.SPLASH) {
-    NavHost(navController = navController, startDestination = startDestination,
-        enterTransition = { slideInHorizontally(initialOffsetX = { 300 }, animationSpec = tween(300)) + fadeIn(tween(300)) },
-        exitTransition = { slideOutHorizontally(targetOffsetX = { -300 }, animationSpec = tween(300)) + fadeOut(tween(300)) },
-        popEnterTransition = { slideInHorizontally(initialOffsetX = { -300 }, animationSpec = tween(300)) + fadeIn(tween(300)) },
-        popExitTransition = { slideOutHorizontally(targetOffsetX = { 300 }, animationSpec = tween(300)) + fadeOut(tween(300)) }
+fun GradeFlowNavGraph(navController: NavHostController, startDestination: String = NavRoutes.HOME) {
+    NavHost(
+        navController = navController,
+        startDestination = startDestination,
+        enterTransition = { fadeIn(tween(150)) },
+        exitTransition = { fadeOut(tween(100)) },
+        popEnterTransition = { fadeIn(tween(150)) },
+        popExitTransition = { fadeOut(tween(100)) }
     ) {
-        composable(NavRoutes.SPLASH) {
-            SplashScreen(
-                onNavigateToOnboarding = { navController.navigate(NavRoutes.ONBOARDING) { popUpTo(NavRoutes.SPLASH) { inclusive = true } } },
-                onNavigateToHome = { navController.navigate(NavRoutes.HOME) { popUpTo(NavRoutes.SPLASH) { inclusive = true } } }
-            )
-        }
         composable(NavRoutes.ONBOARDING) {
             OnboardingScreen(onFinish = { navController.navigate(NavRoutes.HOME) { popUpTo(NavRoutes.ONBOARDING) { inclusive = true } } })
         }
