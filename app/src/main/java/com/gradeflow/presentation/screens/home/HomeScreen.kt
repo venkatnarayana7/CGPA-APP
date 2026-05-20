@@ -66,12 +66,21 @@ fun HomeScreen(
                 recentTgpa.forEach { r ->
                     key(r.id) {
                         GradeFlowCard(Modifier.padding(vertical = 4.dp)) {
-                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                                Column {
-                                    Text("TGPA: ${r.tgpa.formatGpa()}", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+                            Row(
+                                Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.Top
+                            ) {
+                                Column(Modifier.weight(1f)) {
+                                    Text("CGPA: ${r.tgpa.formatGpa()}", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                                     Text("${r.universityName} - ${r.semesterName}", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(0.6f))
                                 }
-                                Text(r.timestamp.toShortDate(), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(0.5f))
+                                Spacer(Modifier.width(12.dp))
+                                Text(
+                                    r.timestamp.toShortDate(),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurface.copy(0.45f),
+                                    modifier = Modifier.padding(top = 2.dp)
+                                )
                             }
                         }
                     }
@@ -79,12 +88,21 @@ fun HomeScreen(
                 recentCgpa.forEach { r ->
                     key(r.id) {
                         GradeFlowCard(Modifier.padding(vertical = 4.dp)) {
-                            Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.SpaceBetween, verticalAlignment = Alignment.CenterVertically) {
-                                Column {
-                                    Text("CGPA: ${r.cgpa.formatGpa()}", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
+                            Row(
+                                Modifier.fillMaxWidth(),
+                                verticalAlignment = Alignment.Top
+                            ) {
+                                Column(Modifier.weight(1f)) {
+                                    Text("CGPA: ${r.cgpa.formatGpa()}", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.Bold)
                                     Text("${r.universityName} - ${r.totalSemesters} Semesters", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(0.6f))
                                 }
-                                Text(r.timestamp.toShortDate(), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onSurface.copy(0.5f))
+                                Spacer(Modifier.width(12.dp))
+                                Text(
+                                    r.timestamp.toShortDate(),
+                                    style = MaterialTheme.typography.labelSmall,
+                                    color = MaterialTheme.colorScheme.onSurface.copy(0.45f),
+                                    modifier = Modifier.padding(top = 2.dp)
+                                )
                             }
                         }
                     }
