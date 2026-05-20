@@ -1,7 +1,6 @@
 package com.gradeflow.presentation.navigation
 
 import androidx.compose.animation.*
-import androidx.compose.animation.core.tween
 import androidx.compose.runtime.Composable
 import androidx.navigation.NavHostController
 import androidx.navigation.NavType
@@ -22,10 +21,10 @@ fun GradeFlowNavGraph(navController: NavHostController, startDestination: String
     NavHost(
         navController = navController,
         startDestination = startDestination,
-        enterTransition = { fadeIn(tween(150)) },
-        exitTransition = { fadeOut(tween(100)) },
-        popEnterTransition = { fadeIn(tween(150)) },
-        popExitTransition = { fadeOut(tween(100)) }
+        enterTransition = { EnterTransition.None },
+        exitTransition = { ExitTransition.None },
+        popEnterTransition = { EnterTransition.None },
+        popExitTransition = { ExitTransition.None }
     ) {
         composable(NavRoutes.ONBOARDING) {
             OnboardingScreen(onFinish = { navController.navigate(NavRoutes.HOME) { popUpTo(NavRoutes.ONBOARDING) { inclusive = true } } })

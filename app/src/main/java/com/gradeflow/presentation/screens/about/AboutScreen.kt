@@ -5,7 +5,7 @@ import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.*
+import androidx.compose.material.icons.filled.ArrowBack
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -28,107 +28,32 @@ fun AboutScreen(onBack: () -> Unit) {
         }
     ) { padding ->
         Column(
-            Modifier
-                .fillMaxSize()
-                .padding(padding)
-                .verticalScroll(rememberScrollState())
-                .padding(24.dp),
+            Modifier.fillMaxSize().padding(padding).verticalScroll(rememberScrollState()).padding(horizontal = 24.dp),
             horizontalAlignment = Alignment.CenterHorizontally
         ) {
-            Spacer(Modifier.height(32.dp))
-
-            Surface(
-                Modifier.size(100.dp),
-                shape = CircleShape,
-                color = MaterialTheme.colorScheme.primary
-            ) {
+            Spacer(Modifier.height(40.dp))
+            Surface(Modifier.size(88.dp), shape = CircleShape, color = MaterialTheme.colorScheme.primary) {
                 Box(contentAlignment = Alignment.Center) {
-                    Text("G", fontSize = 44.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onPrimary)
+                    Text("G", fontSize = 40.sp, fontWeight = FontWeight.Bold, color = MaterialTheme.colorScheme.onPrimary)
                 }
             }
-
             Spacer(Modifier.height(20.dp))
-
             Text("GradeFlow", style = MaterialTheme.typography.headlineMedium, fontWeight = FontWeight.Bold)
-            Text("Version 1.0.0", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onBackground.copy(0.6f))
-
-            Spacer(Modifier.height(24.dp))
-
-            Text(
-                "Your all-in-one GPA companion. Calculate TGPA, CGPA and track your academic progress across Indian universities with ease.",
-                style = MaterialTheme.typography.bodyLarge,
-                textAlign = TextAlign.Center,
-                color = MaterialTheme.colorScheme.onBackground.copy(0.8f)
-            )
-
+            Text("Smart TGPA & CGPA Calculator", style = MaterialTheme.typography.bodyMedium, color = MaterialTheme.colorScheme.onBackground.copy(0.6f))
+            Spacer(Modifier.height(8.dp))
+            Text("Supporting multiple Indian universities and grading systems.", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onBackground.copy(0.5f), textAlign = TextAlign.Center)
             Spacer(Modifier.height(32.dp))
-
-            Card(
-                Modifier.fillMaxWidth(),
-                shape = MaterialTheme.shapes.medium,
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
-            ) {
-                Column(Modifier.padding(16.dp)) {
-                    Text("What you can do", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
-                    Spacer(Modifier.height(12.dp))
-
-                    val features = listOf(
-                        "Calculate TGPA for any semester",
-                        "Calculate CGPA across all semesters",
-                        "Supports 10+ Indian universities",
-                        "Auto grade-to-percentage conversion",
-                        "Save and view past results",
-                        "Works completely offline",
-                        "Light & Dark mode support",
-                        "Search and favorite universities"
-                    )
-
-                    features.forEach { f ->
-                        Row(Modifier.padding(vertical = 5.dp), verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Filled.CheckCircle, null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(18.dp))
-                            Spacer(Modifier.width(10.dp))
-                            Text(f, style = MaterialTheme.typography.bodyMedium)
-                        }
-                    }
-                }
+            Text("GradeFlow helps students calculate TGPA, SGPA, CGPA, and percentage using university-specific grading systems.", style = MaterialTheme.typography.bodyLarge, textAlign = TextAlign.Center, color = MaterialTheme.colorScheme.onBackground.copy(0.8f))
+            Spacer(Modifier.height(40.dp))
+            Card(Modifier.fillMaxWidth(), shape = MaterialTheme.shapes.medium, colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surfaceVariant.copy(alpha = 0.5f))) {
+                Text("Results are estimated based on available university grading systems. Always verify official academic results from your institution.", modifier = Modifier.padding(16.dp), style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onBackground.copy(0.6f), textAlign = TextAlign.Center)
             }
-
-            Spacer(Modifier.height(24.dp))
-
-            Card(
-                Modifier.fillMaxWidth(),
-                shape = MaterialTheme.shapes.medium,
-                colors = CardDefaults.cardColors(containerColor = MaterialTheme.colorScheme.surface)
-            ) {
-                Column(Modifier.padding(16.dp)) {
-                    Text("Supported Universities", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold)
-                    Spacer(Modifier.height(12.dp))
-
-                    val universities = listOf(
-                        "IIT Bombay", "IIT Delhi", "IIT Madras",
-                        "IIT Kanpur", "IIT Kharagpur", "BITS Pilani",
-                        "Anna University", "VTU", "JNTUH", "LPU"
-                    )
-
-                    universities.forEach { u ->
-                        Row(Modifier.padding(vertical = 4.dp), verticalAlignment = Alignment.CenterVertically) {
-                            Icon(Icons.Filled.School, null, tint = MaterialTheme.colorScheme.primary, modifier = Modifier.size(16.dp))
-                            Spacer(Modifier.width(10.dp))
-                            Text(u, style = MaterialTheme.typography.bodyMedium)
-                        }
-                    }
-                }
-            }
-
+            Spacer(Modifier.weight(1f))
+            Text("Developed by", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onBackground.copy(0.4f))
+            Text("Venkata Narayana", style = MaterialTheme.typography.titleMedium, fontWeight = FontWeight.SemiBold, color = MaterialTheme.colorScheme.onBackground)
+            Spacer(Modifier.height(12.dp))
+            Text("Version 1.0.0", style = MaterialTheme.typography.bodySmall, color = MaterialTheme.colorScheme.onBackground.copy(0.4f))
             Spacer(Modifier.height(32.dp))
-
-            Text(
-                "Made with care for students",
-                style = MaterialTheme.typography.bodySmall,
-                color = MaterialTheme.colorScheme.onBackground.copy(0.5f)
-            )
-
-            Spacer(Modifier.height(16.dp))
         }
     }
 }
