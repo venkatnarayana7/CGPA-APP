@@ -29,7 +29,7 @@ fun UniversitySelectionScreen(calculatorType: String, onUniversitySelected: (Str
                 is UiState.Loading -> LoadingView(message = "Loading universities...")
                 is UiState.Empty -> EmptyStateView(title = "No universities found", subtitle = "Try a different search term")
                 is UiState.Error -> EmptyStateView(title = "Error", subtitle = state.message)
-                is UiState.Success -> LazyColumn(verticalArrangement = Arrangement.spacedBy(8.dp), contentPadding = PaddingValues(bottom = 16.dp)) {
+                is UiState.Success -> LazyColumn(verticalArrangement = Arrangement.spacedBy(10.dp), contentPadding = PaddingValues(bottom = 16.dp)) {
                     items(state.data, key = { it.id }) { u -> UniversityCard(u.name, u.shortName, u.location, u.isFavorite, onClick = { onUniversitySelected(u.id) }, onFavoriteClick = { viewModel.toggleFavorite(u) }) }
                 }
             }
